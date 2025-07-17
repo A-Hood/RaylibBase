@@ -24,7 +24,8 @@ endif()
 
 # Get all source files
 file(GLOB_RECURSE source "src/*.cpp" "src/*.h")
+set(ALL_SOURCE ${source}) # Add all source files
 
-add_executable(${PROJECT_NAME} ${source}) 
+add_executable(${PROJECT_NAME} ${ALL_SOURCE}) 
 include_directories(${CMAKE_SOURCE_DIR}/includes)
 target_link_libraries(${PROJECT_NAME} raylib)
